@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>LearnAble</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>LearnAble</h1>
+    <p>Learning that adapts to how you learn.</p>
+
+    <nav>
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('register')">Register</button>
+      <button onclick="showPage('login')">Login</button>
+      <button onclick="showPage('dashboard')">Dashboard</button>
+
+      <button id="logoutButton"
+              onclick="logout()" hidden>
+        Logout
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home">
+      <h2>Welcome to LearnAble!</h2>
+
+      <p>
+        LearnAble helps students learn at their own pace
+        with short lessons, simple explanations, and
+        personalized learning options.
+      </p>
+
+      <button onclick="showPage('register')">
+        Get Started
+      </button>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="register" hidden>
+      <h2>Create an Account</h2>
+
+      <form id="registerForm">
+        <label for="name">Name</label>
+        <input id="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password"
+               minlength="8" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login" hidden>
+      <h2>Login</h2>
+
+      <form id="loginForm">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" type="email" required>
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" type="password" required>
+
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" hidden>
+      <h2>My Learning Dashboard</h2>
+
+      <p>Welcome to your learning space!</p>
+
+      <h3>Learning Preferences</h3>
+
+      <label>
+        <input type="checkbox" id="largeText">
+        Larger text
+      </label>
+
+      <label>
+        <input type="checkbox" id="simpleSteps">
+        Step-by-step explanations
+      </label>
+
+      <h3>Math Lessons</h3>
+
+      <p>Select a lesson to begin learning.</p>
+
+      <div class="lesson-list">
+        <button onclick="startLesson(1)">
+          Lesson 1: Addition
+        </button>
+
+        <button onclick="startLesson(2)">
+          Lesson 2: Subtraction
+        </button>
+
+        <button onclick="startLesson(3)">
+          Lesson 3: Multiplication
+        </button>
+
+        <button onclick="startLesson(4)">
+          Lesson 4: Division
+        </button>
+      </div>
+
+      <!-- SELECTED LESSON -->
+      <div id="lesson" hidden>
+
+        <h3 id="lessonTitle"></h3>
+
+        <p id="lessonExplanation"></p>
+
+        <p id="lessonQuestion"></p>
+
+        <div id="answerButtons"></div>
+
+        <p id="feedback" aria-live="polite"></p>
+
+      </div>
+
+      <h3>My Progress</h3>
+
+      <p id="progress">Lessons completed: 0</p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>LearnAble - SOEN 287 Course Project</p>
+  </footer>
+
+</body>
+</html>

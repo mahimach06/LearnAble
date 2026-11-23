@@ -1,0 +1,83 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8f5ff;
+  color: #302b42;
+}
+
+header {
+  background: #7154a1;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+button {
+  background: #7154a1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+nav button {
+  background: white;
+  color: #7154a1;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+main {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+section {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px #00000012;
+}
+
+section[hidden], div[hidden] {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#lesson {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f1eafa;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+}

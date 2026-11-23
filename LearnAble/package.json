@@ -1,0 +1,10 @@
+
+{
+  "name": "learnable",
+  "version": "1.0.0",
+  "description": "SOEN 287 LearnAble Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
